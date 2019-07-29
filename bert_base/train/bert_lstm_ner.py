@@ -122,7 +122,7 @@ class NerProcessor(DataProcessor):
                 with codecs.open(os.path.join(self.output_dir, 'label_list.pkl'), 'wb') as rf:
                     pickle.dump(self.labels, rf)
             else:
-                self.labels = ["O", 'B-Disease', 'I-Disease', "B-Drug", "I-Drug", "X", "[CLS]", "[SEP]"]
+                self.labels = ["O", 'B-Disease', 'I-Disease', "B-Drug", "I-Drug", "B-Chemical", "I-Chemical", "X", "[CLS]", "[SEP]"]
         return self.labels
 
     def _create_example(self, lines, set_type):
